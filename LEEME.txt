@@ -1,8 +1,0 @@
-BrisaByte — tienda de portátiles gamer (SENA ADSO)
-
-Abra index.html con Live Server.
-Requiere Internet para cargar Bootstrap, iconos y fuentes desde el CDN.
-
-Para cambiar precios, nombres o especificaciones edite las tarjetas de la
-sección #catalogo y la tabla de la sección #comparar en index.html.
-(Las tarjetas llevan data-marca, data-ram y data-precio: los filtros las usan.)

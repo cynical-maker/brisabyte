@@ -1,0 +1,366 @@
+/* ============================================================
+   estilos.css — BrisaByte (portátiles gamer)
+   Paleta: negro carbón + verde lima + magenta. Bordes angulares.
+   ============================================================ */
+
+:root {
+  --b-fondo: #0c0c0f;
+  --b-panel: #16161b;
+  --b-panel-2: #1d1d24;
+  --b-borde: #2a2a33;
+  --b-lima: #b8ff2c;
+  --b-magenta: #ff2e93;
+  --b-texto-suave: #9a9aa8;
+  --corte: 12px;
+
+  --b-texto: #f5f5f5;
+}
+
+/* ============================================================
+   TEMAS: OSCURO Y BLANCO
+   Agrega .tema-blanco al <body> para activar el tema claro.
+   ============================================================ */
+
+body {
+  color: var(--b-texto);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Tema blanco */
+body.tema-blanco {
+  --b-fondo: #f5f5f5;
+  --b-panel: #ffffff;
+  --b-panel-2: #eeeeee;
+  --b-borde: #d6d6d6;
+  --b-texto: #151515;
+  --b-texto-suave: #666666;
+}
+
+/* Elementos que usan colores escritos directamente */
+body.tema-blanco .navbar {
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.tema-blanco .btn-contorno {
+  --bs-btn-color: #151515;
+  --bs-btn-border-color: #cfcfcf;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #151515;
+  --bs-btn-hover-border-color: #151515;
+}
+
+body.tema-blanco .foto-blanca,
+body.tema-blanco .item-foto {
+  background: #ffffff;
+}
+
+body.tema-blanco .relampago {
+  background: linear-gradient(100deg, #f4e5ed, #f4f4f4 55%, #eaf4d5);
+}
+
+body.tema-blanco .suscripcion {
+  background: linear-gradient(110deg, #eaf4d5, #f4f4f4 50%, #f4e5ed);
+}
+
+/* Botón para cambiar tema */
+.btn-tema {
+  border: 1px solid var(--b-borde);
+  background: var(--b-panel);
+  color: var(--b-texto);
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  font-family: "Chakra Petch", "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease, color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.btn-tema:hover {
+  border-color: var(--b-lima);
+  color: var(--b-lima);
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--b-fondo);
+}
+
+h1, h2, h3, h4, .navbar-brand, .precio, .tit {
+  font-family: "Chakra Petch", "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.text-lima { color: var(--b-lima); }
+.text-magenta { color: var(--b-magenta); }
+.bg-panel { background: var(--b-panel); }
+.borde { border-color: var(--b-borde) !important; }
+.suave { color: var(--b-texto-suave); }
+
+/* Esquinas cortadas (botones y etiquetas) */
+.corte {
+  clip-path: polygon(0 0, calc(100% - var(--corte)) 0, 100% var(--corte),
+                     100% 100%, var(--corte) 100%, 0 calc(100% - var(--corte)));
+}
+
+/* Botón lima */
+.btn-lima {
+  --bs-btn-color: #0c0c0f;
+  --bs-btn-bg: var(--b-lima);
+  --bs-btn-border-color: var(--b-lima);
+  --bs-btn-hover-color: #0c0c0f;
+  --bs-btn-hover-bg: #d4ff7a;
+  --bs-btn-hover-border-color: #d4ff7a;
+  --bs-btn-active-color: #0c0c0f;
+  --bs-btn-active-bg: #d4ff7a;
+  --bs-btn-active-border-color: #d4ff7a;
+  --bs-btn-disabled-color: #0c0c0f;
+  --bs-btn-disabled-bg: var(--b-lima);
+  --bs-btn-disabled-border-color: var(--b-lima);
+  --bs-btn-focus-shadow-rgb: 184, 255, 44;
+  --bs-btn-border-radius: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.btn-contorno {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: var(--b-borde);
+  --bs-btn-hover-color: #0c0c0f;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-border-radius: 0;
+}
+
+/* Barra de anuncios */
+.anuncio {
+  background: var(--b-lima);
+  color: #0c0c0f;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(12, 12, 15, 0.92) !important;
+  backdrop-filter: blur(8px);
+  border-color: var(--b-borde) !important;
+}
+
+.logo-b {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--b-lima);
+  color: #0c0c0f;
+  clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0 100%);
+}
+
+.navbar .nav-link { font-weight: 500; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--b-lima); }
+
+/* Hero tipo bento */
+.hero { background: radial-gradient(50rem 25rem at 0% 0%, rgba(184, 255, 44, 0.12), transparent 60%), var(--b-fondo); }
+
+.bento {
+  position: relative;
+  height: 100%;
+  padding: 1.75rem;
+  background: var(--b-panel);
+  border: 1px solid var(--b-borde);
+  overflow: hidden;
+}
+
+.bento::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 4.5rem; height: 4px;
+  background: var(--b-lima);
+}
+
+.bento-principal {
+  background:
+    radial-gradient(30rem 20rem at 100% 100%, rgba(255, 46, 147, 0.22), transparent 65%),
+    var(--b-panel);
+}
+
+.hero-titulo {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.foto-blanca {
+  background: #fff;
+  padding: 0.35rem;
+}
+
+.foto-blanca img { display: block; width: 100%; height: auto; }
+
+/* Chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--b-borde);
+  background: var(--b-panel-2);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.chip i { color: var(--b-lima); }
+
+/* Oferta relámpago */
+.relampago {
+  background: linear-gradient(100deg, #2b0a1c, #14141a 55%, #1a2605);
+  border-block: 1px solid var(--b-borde);
+}
+
+.cuenta {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.cuenta div {
+  min-width: 3.6rem;
+  padding: 0.4rem 0.5rem;
+  text-align: center;
+  background: var(--b-fondo);
+  border: 1px solid var(--b-borde);
+}
+
+.cuenta strong {
+  display: block;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  color: var(--b-lima);
+}
+
+.cuenta span { font-size: 0.65rem; text-transform: uppercase; color: var(--b-texto-suave); }
+
+/* Filtros laterales */
+.filtros {
+  background: var(--b-panel);
+  border: 1px solid var(--b-borde);
+  padding: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .filtros-sticky { position: sticky; top: 5rem; }
+}
+
+.filtros h3 { font-size: 0.85rem; color: var(--b-lima); margin-bottom: 0.6rem; }
+
+.form-check-input:checked {
+  background-color: var(--b-lima);
+  border-color: var(--b-lima);
+}
+
+.form-range::-webkit-slider-thumb { background: var(--b-lima); }
+.form-range::-moz-range-thumb { background: var(--b-lima); }
+
+/* Tarjeta de catálogo horizontal */
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--b-panel);
+  border: 1px solid var(--b-borde);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.item:hover { border-color: var(--b-lima); transform: translateX(4px); }
+
+@media (min-width: 768px) {
+  .item { flex-direction: row; }
+  .item .item-foto { flex: 0 0 15rem; }
+}
+
+.item-foto { background: #fff; position: relative; }
+.item-foto img { width: 100%; height: 100%; object-fit: contain; aspect-ratio: 1 / 1; display: block; }
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.specs div { display: flex; gap: 0.5rem; align-items: baseline; }
+.specs i { color: var(--b-lima); }
+.specs small { display: block; color: var(--b-texto-suave); font-size: 0.7rem; text-transform: uppercase; }
+
+.precio { font-size: 1.6rem; font-weight: 700; }
+
+.lista-specs li {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--b-borde);
+  font-size: 0.88rem;
+}
+
+.lista-specs li:last-child { border-bottom: 0; }
+.lista-specs i { color: var(--b-lima); }
+
+/* Tabla comparativa */
+.tabla-comparar {
+  --bs-table-bg: var(--b-panel);
+  --bs-table-border-color: var(--b-borde);
+  min-width: 46rem;
+}
+
+.tabla-comparar th[scope="row"] { color: var(--b-texto-suave); font-weight: 500; white-space: nowrap; }
+.tabla-comparar thead img { width: 5rem; height: 5rem; object-fit: cover; background: #fff; }
+
+/* Suscripción */
+.suscripcion { background: linear-gradient(110deg, #1a2605, #14141a 50%, #2b0a1c); }
+
+section[id] { scroll-margin-top: 5.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .item { transition: none; }
+  .item:hover { transform: none; }
+}
+
+/* El botón «volver arriba» es redondo: sin esquinas cortadas */
+#btnArriba { clip-path: none; }
+
+body.tema-blanco .text-white {
+  color: var(--b-texto) !important;
+}
+
+body.tema-blanco .text-light {
+  color: var(--b-texto) !important;
+}
+
+body.tema-blanco .navbar-toggler {
+  border-color: var(--b-borde);
+}
+
+body.tema-blanco .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Suaviza el cambio entre temas */
+body,
+.navbar,
+.bento,
+.item,
+.filtros,
+.chip,
+.cuenta div,
+.tabla-comparar,
+.btn-tema {
+  transition: background-color 0.25s ease, color 0.25s ease,
+              border-color 0.25s ease;
+}

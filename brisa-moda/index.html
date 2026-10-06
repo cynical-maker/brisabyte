@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrisaByte | Portátiles gamer</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <div class="anuncio text-center py-1 px-2">
+    <i class="bi bi-truck"></i> Envío gratis a toda Colombia &nbsp;·&nbsp;
+    <i class="bi bi-credit-card"></i> Hasta 12 cuotas &nbsp;·&nbsp;
+    <i class="bi bi-shield-check"></i> Garantía oficial
+  </div>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg border-bottom" aria-label="Menú principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#inicio">
+          <span class="logo-b"><i class="bi bi-cpu-fill"></i></span>
+          <span>Brisa<span class="text-lima">Byte</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuTienda" aria-controls="menuTienda"
+                aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuTienda">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#catalogo-seccion">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#comparar">Comparar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#preguntas">Preguntas</a></li>
+          </ul>
+          <button class="btn btn-contorno position-relative" type="button"
+                  data-bs-toggle="offcanvas" data-bs-target="#panelCarrito"
+                  aria-controls="panelCarrito"
+                  data-bs-title="Ver carrito" data-bs-placement="bottom">
+            <i class="bi bi-cart3"></i> Carrito
+            <span class="position-absolute top-0 start-100 translate-middle
+                         badge rounded-pill text-bg-danger" id="contadorCarrito">0</span>
+
+          <button id="btnTema" class="btn btn-modo-oscuro" type="button"
+                  data-bs-toggle="tooltip" data-bs-title="Cambiar modo oscuro/claro"
+                  data-bs-placement="button">
+          <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          
+
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO TIPO BENTO ===== -->
+    <section class="py-5 hero" id="inicio">
+      <div class="container">
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-8">
+            <div class="bento bento-principal">
+              <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                  <p class="text-lima fw-semibold text-uppercase small mb-2">
+                    <i class="bi bi-lightning-charge-fill"></i> Colección gamer 2026
+                  </p>
+                  <h1 class="hero-titulo mb-3">Sube de <span class="text-lima">nivel</span></h1>
+                  <p class="suave mb-3">
+                    MSI Thin 15 con pantalla de 144 Hz y gráficos GeForce RTX. Incluye mochila MSI.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="chip"><i class="bi bi-cpu"></i> Core i5</span>
+                    <span class="chip"><i class="bi bi-memory"></i> 8 GB</span>
+                    <span class="chip"><i class="bi bi-device-ssd"></i> 512 GB</span>
+                    <span class="chip"><i class="bi bi-display"></i> 144 Hz</span>
+                  </div>
+                  <p class="mb-3">
+                    <span class="precio fs-2 text-lima">$3.199.000</span>
+                    <del class="suave ms-2">$3.599.000</del>
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-lima btn-lg btn-agregar"
+                            data-nombre="MSI Thin 15" data-precio="3199000">
+                      <i class="bi bi-cart-plus"></i> Comprar
+                    </button>
+                    <a href="#catalogo-seccion" class="btn btn-contorno btn-lg">Ver catálogo</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="foto-blanca">
+                    <img src="img/produ1.png" width="900" height="900"
+                         alt="Portátil gamer MSI Thin 15 con mochila">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex flex-column gap-3 gap-lg-4">
+            <a href="#catalogo-seccion" class="bento text-decoration-none text-body" data-ir-marca="asus">
+              <div class="row g-3 align-items-center">
+                <div class="col-5"><div class="foto-blanca"><img src="img/produ3.png" width="900" height="900" alt="ASUS TUF Gaming A15"></div></div>
+                <div class="col-7">
+                  <p class="small text-lima text-uppercase fw-semibold mb-1">ASUS TUF</p>
+                  <p class="tit fw-bold mb-1">TUF Gaming A15</p>
+                  <p class="small suave mb-0">Ryzen 7 · 16 GB · 512 GB</p>
+                </div>
+              </div>
+            </a>
+            <a href="#catalogo-seccion" class="bento text-decoration-none text-body" data-ir-marca="hp">
+              <div class="row g-3 align-items-center">
+                <div class="col-5"><div class="foto-blanca"><img src="img/produ4.png" width="900" height="900" alt="HP Victus 15"></div></div>
+                <div class="col-7">
+                  <p class="small text-lima text-uppercase fw-semibold mb-1">HP Victus</p>
+                  <p class="tit fw-bold mb-1">Victus 15</p>
+                  <p class="small suave mb-0">Ryzen 7 · 8 GB · Game Pass</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OFERTA RELÁMPAGO ===== -->
+    <section class="relampago py-4" id="oferta">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-5">
+            <p class="text-magenta fw-semibold text-uppercase small mb-1">
+              <i class="bi bi-stopwatch"></i> Oferta relámpago
+            </p>
+            <h2 class="h3 mb-1">HP Victus 15 · -8 %</h2>
+            <p class="suave mb-0">Termina hoy a la medianoche.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="cuenta" role="timer" aria-label="Tiempo restante de la oferta">
+              <div><strong id="cuentaHoras">00</strong><span>horas</span></div>
+              <div><strong id="cuentaMinutos">00</strong><span>min</span></div>
+              <div><strong id="cuentaSegundos">00</strong><span>seg</span></div>
+            </div>
+          </div>
+          <div class="col-lg-3 text-lg-end">
+            <button type="button" class="btn btn-lima btn-agregar"
+                    data-nombre="HP Victus 15" data-precio="3699000">
+              <i class="bi bi-cart-plus"></i> Comprar · $3.699.000
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATÁLOGO CON FILTROS ===== -->
+    <section class="py-5" id="catalogo-seccion">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+          <h2 class="h3 mb-0">Catálogo de portátiles</h2>
+          <button class="btn btn-contorno d-lg-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelFiltros" aria-expanded="false" aria-controls="panelFiltros">
+            <i class="bi bi-funnel"></i> Filtros
+          </button>
+        </div>
+
+        <div class="row g-4">
+          <aside class="col-lg-3">
+            <div class="collapse d-lg-block filtros-sticky" id="panelFiltros">
+              <div class="filtros">
+                <div class="mb-4">
+                  <h3 class="tit">Marca</h3>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="marca" id="marcaTodas" value="todas" checked>
+                    <label class="form-check-label" for="marcaTodas">Todas</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="marca" id="marca-msi" value="msi">
+                    <label class="form-check-label" for="marca-msi">MSI</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="marca" id="marca-asus" value="asus">
+                    <label class="form-check-label" for="marca-asus">ASUS</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="marca" id="marca-hp" value="hp">
+                    <label class="form-check-label" for="marca-hp">HP</label>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h3 class="tit">Memoria RAM</h3>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ram" id="ramTodas" value="todas" checked>
+                    <label class="form-check-label" for="ramTodas">Cualquiera</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ram" id="ram8" value="8">
+                    <label class="form-check-label" for="ram8">8 GB</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ram" id="ram16" value="16">
+                    <label class="form-check-label" for="ram16">16 GB</label>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h3 class="tit">Precio máximo</h3>
+                  <input type="range" class="form-range" id="rangoPrecio" min="3000000"
+                         max="6000000" step="100000" value="6000000"
+                         aria-label="Precio máximo">
+                  <p class="small mb-0">Hasta <strong id="etiquetaPrecio"></strong></p>
+                </div>
+                <button type="button" class="btn btn-contorno btn-sm w-100" id="btnLimpiar">
+                  <i class="bi bi-x-circle"></i> Limpiar filtros
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="col-lg-9">
+            <div class="row g-2 align-items-center mb-3">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+                  <input type="search" class="form-control" id="buscador"
+                         placeholder="Buscar por modelo, marca o procesador"
+                         aria-label="Buscar portátil">
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <select class="form-select" id="ordenar" aria-label="Ordenar por">
+                  <option value="relevancia" selected>Destacados</option>
+                  <option value="menor">Menor precio</option>
+                  <option value="mayor">Mayor precio</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-3 text-end small suave" id="contadorResultados" aria-live="polite"></div>
+            </div>
+
+            <div class="d-grid gap-3" id="catalogo">
+
+          <article class="item" data-marca="msi" data-ram="8"
+                   data-precio="3199000" data-busqueda="MSI Thin 15 MSI Intel Core i5 NVIDIA GeForce RTX">
+            <div class="item-foto">
+              <span class="badge text-bg-danger rounded-0 position-absolute top-0 start-0 m-2">-11 %</span>
+              <img src="img/produ1.png" width="900" height="900" alt="Portátil gamer MSI Thin 15">
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+              <p class="small text-lima fw-semibold text-uppercase mb-1">MSI</p>
+              <h3 class="h5 tit mb-3">MSI Thin 15</h3>
+              <div class="specs mb-3">
+                <div><i class="bi bi-cpu"></i><span><small>Procesador</small>Intel Core i5</span></div>
+                <div><i class="bi bi-gpu-card"></i><span><small>Gráficos</small>NVIDIA GeForce RTX</span></div>
+                <div><i class="bi bi-memory"></i><span><small>Memoria RAM</small>8 GB</span></div>
+                <div><i class="bi bi-device-ssd"></i><span><small>Almacenamiento</small>512 GB SSD</span></div>
+                <div><i class="bi bi-display"></i><span><small>Pantalla</small>15.6" · 144 Hz</span></div>
+                <div><i class="bi bi-patch-check"></i><span><small>Incluye</small>Incluye mochila MSI y Kaspersky</span></div>
+              </div>
+              <div class="mt-auto d-flex flex-wrap align-items-end justify-content-between gap-3">
+                <div>
+                  <p class="mb-0"><span class="precio text-lima">$3.199.000</span> <del class="small suave">$3.599.000</del></p>
+                  <p class="small suave mb-0">12 cuotas de $266.583</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-contorno btn-sm"
+                          data-bs-toggle="modal" data-bs-target="#modalProducto"
+                          data-nombre="MSI Thin 15" data-precio="3199000"
+                          data-imagen="img/produ1.png"
+                          data-descripcion="Incluye mochila MSI y Kaspersky."
+                          data-specs="Procesador: Intel Core i5|Gráficos: NVIDIA GeForce RTX|Memoria RAM: 8 GB|Almacenamiento: 512 GB SSD|Pantalla: 15.6&quot; a 144 Hz|Incluye mochila MSI y Kaspersky">
+                    <i class="bi bi-list-check"></i> Ficha técnica
+                  </button>
+                  <button type="button" class="btn btn-lima btn-sm btn-agregar"
+                          data-nombre="MSI Thin 15" data-precio="3199000">
+                    <i class="bi bi-cart-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item" data-marca="msi" data-ram="16"
+                   data-precio="5499000" data-busqueda="MSI Gaming 16&quot; RTX 5050 MSI Intel Core 7 NVIDIA GeForce RTX 5050">
+            <div class="item-foto">
+              <span class="badge bg-success rounded-0 position-absolute top-0 start-0 m-2">Nuevo</span>
+              <img src="img/produ2.png" width="900" height="900" alt="Portátil gamer MSI Gaming 16&quot; RTX 5050">
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+              <p class="small text-lima fw-semibold text-uppercase mb-1">MSI</p>
+              <h3 class="h5 tit mb-3">MSI Gaming 16" RTX 5050</h3>
+              <div class="specs mb-3">
+                <div><i class="bi bi-cpu"></i><span><small>Procesador</small>Intel Core 7</span></div>
+                <div><i class="bi bi-gpu-card"></i><span><small>Gráficos</small>NVIDIA GeForce RTX 5050</span></div>
+                <div><i class="bi bi-memory"></i><span><small>Memoria RAM</small>16 GB</span></div>
+                <div><i class="bi bi-device-ssd"></i><span><small>Almacenamiento</small>1 TB SSD</span></div>
+                <div><i class="bi bi-display"></i><span><small>Pantalla</small>16" · 144 Hz</span></div>
+                <div><i class="bi bi-patch-check"></i><span><small>Incluye</small>Certificación militar MIL-STD-810H</span></div>
+              </div>
+              <div class="mt-auto d-flex flex-wrap align-items-end justify-content-between gap-3">
+                <div>
+                  <p class="mb-0"><span class="precio">$5.499.000</span></p>
+                  <p class="small suave mb-0">12 cuotas de $458.250</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-contorno btn-sm"
+                          data-bs-toggle="modal" data-bs-target="#modalProducto"
+                          data-nombre="MSI Gaming 16&quot; RTX 5050" data-precio="5499000"
+                          data-imagen="img/produ2.png"
+                          data-descripcion="Certificación militar MIL-STD-810H."
+                          data-specs="Procesador: Intel Core 7|Gráficos: NVIDIA GeForce RTX 5050|Memoria RAM: 16 GB|Almacenamiento: 1 TB SSD|Pantalla: 16&quot; a 144 Hz|Certificación militar MIL-STD-810H">
+                    <i class="bi bi-list-check"></i> Ficha técnica
+                  </button>
+                  <button type="button" class="btn btn-lima btn-sm btn-agregar"
+                          data-nombre="MSI Gaming 16&quot; RTX 5050" data-precio="5499000">
+                    <i class="bi bi-cart-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item" data-marca="asus" data-ram="16"
+                   data-precio="4399000" data-busqueda="ASUS TUF Gaming A15 ASUS AMD Ryzen 7 NVIDIA GeForce">
+            <div class="item-foto">
+              
+              <img src="img/produ3.png" width="900" height="900" alt="Portátil gamer ASUS TUF Gaming A15">
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+              <p class="small text-lima fw-semibold text-uppercase mb-1">ASUS</p>
+              <h3 class="h5 tit mb-3">ASUS TUF Gaming A15</h3>
+              <div class="specs mb-3">
+                <div><i class="bi bi-cpu"></i><span><small>Procesador</small>AMD Ryzen 7</span></div>
+                <div><i class="bi bi-gpu-card"></i><span><small>Gráficos</small>NVIDIA GeForce</span></div>
+                <div><i class="bi bi-memory"></i><span><small>Memoria RAM</small>16 GB</span></div>
+                <div><i class="bi bi-device-ssd"></i><span><small>Almacenamiento</small>512 GB SSD</span></div>
+                <div><i class="bi bi-display"></i><span><small>Pantalla</small>15.6"</span></div>
+                <div><i class="bi bi-patch-check"></i><span><small>Incluye</small>Teclado retroiluminado rojo</span></div>
+              </div>
+              <div class="mt-auto d-flex flex-wrap align-items-end justify-content-between gap-3">
+                <div>
+                  <p class="mb-0"><span class="precio">$4.399.000</span></p>
+                  <p class="small suave mb-0">12 cuotas de $366.583</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-contorno btn-sm"
+                          data-bs-toggle="modal" data-bs-target="#modalProducto"
+                          data-nombre="ASUS TUF Gaming A15" data-precio="4399000"
+                          data-imagen="img/produ3.png"
+                          data-descripcion="Teclado retroiluminado rojo."
+                          data-specs="Procesador: AMD Ryzen 7|Gráficos: NVIDIA GeForce|Memoria RAM: 16 GB|Almacenamiento: 512 GB SSD|Pantalla: 15.6&quot;|Teclado retroiluminado rojo">
+                    <i class="bi bi-list-check"></i> Ficha técnica
+                  </button>
+                  <button type="button" class="btn btn-lima btn-sm btn-agregar"
+                          data-nombre="ASUS TUF Gaming A15" data-precio="4399000">
+                    <i class="bi bi-cart-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item" data-marca="hp" data-ram="8"
+                   data-precio="3699000" data-busqueda="HP Victus 15 HP AMD Ryzen 7 NVIDIA GeForce">
+            <div class="item-foto">
+              <span class="badge text-bg-danger rounded-0 position-absolute top-0 start-0 m-2">-8 %</span>
+              <img src="img/produ4.png" width="900" height="900" alt="Portátil gamer HP Victus 15">
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+              <p class="small text-lima fw-semibold text-uppercase mb-1">HP</p>
+              <h3 class="h5 tit mb-3">HP Victus 15</h3>
+              <div class="specs mb-3">
+                <div><i class="bi bi-cpu"></i><span><small>Procesador</small>AMD Ryzen 7</span></div>
+                <div><i class="bi bi-gpu-card"></i><span><small>Gráficos</small>NVIDIA GeForce</span></div>
+                <div><i class="bi bi-memory"></i><span><small>Memoria RAM</small>8 GB</span></div>
+                <div><i class="bi bi-device-ssd"></i><span><small>Almacenamiento</small>512 GB SSD</span></div>
+                <div><i class="bi bi-display"></i><span><small>Pantalla</small>15.6" · 144 Hz</span></div>
+                <div><i class="bi bi-patch-check"></i><span><small>Incluye</small>Xbox Game Pass y Kaspersky</span></div>
+              </div>
+              <div class="mt-auto d-flex flex-wrap align-items-end justify-content-between gap-3">
+                <div>
+                  <p class="mb-0"><span class="precio text-lima">$3.699.000</span> <del class="small suave">$3.999.000</del></p>
+                  <p class="small suave mb-0">12 cuotas de $308.250</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-contorno btn-sm"
+                          data-bs-toggle="modal" data-bs-target="#modalProducto"
+                          data-nombre="HP Victus 15" data-precio="3699000"
+                          data-imagen="img/produ4.png"
+                          data-descripcion="Xbox Game Pass y Kaspersky."
+                          data-specs="Procesador: AMD Ryzen 7|Gráficos: NVIDIA GeForce|Memoria RAM: 8 GB|Almacenamiento: 512 GB SSD|Pantalla: 15.6&quot; a 144 Hz|Xbox Game Pass y Kaspersky">
+                    <i class="bi bi-list-check"></i> Ficha técnica
+                  </button>
+                  <button type="button" class="btn btn-lima btn-sm btn-agregar"
+                          data-nombre="HP Victus 15" data-precio="3699000">
+                    <i class="bi bi-cart-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+            </div>
+            <p class="text-center suave py-5 d-none" id="sinResultados">
+              <i class="bi bi-emoji-frown fs-2 d-block"></i>
+              No hay portátiles con esos filtros. Prueba a limpiarlos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPARADOR ===== -->
+    <section class="py-5 bg-panel border-top border-bottom borde" id="comparar">
+      <div class="container">
+        <h2 class="h3 text-center mb-4">Compara especificaciones</h2>
+        <div class="table-responsive border borde">
+          <table class="table table-dark align-middle mb-0 tabla-comparar">
+            <thead>
+              <tr><th scope="col"><span class="visually-hidden">Característica</span></th><th scope="col" class="text-center"><img src="img/produmini2.png" alt="MSI Thin 15" width="80" height="80" class="mb-2"><br>MSI Thin 15</th><th scope="col" class="text-center"><img src="img/produmini3.png" alt="MSI Gaming 16&quot; RTX 5050" width="80" height="80" class="mb-2"><br>MSI Gaming 16" RTX 5050</th><th scope="col" class="text-center"><img src="img/produmini4.png" alt="ASUS TUF Gaming A15" width="80" height="80" class="mb-2"><br>ASUS TUF Gaming A15</th><th scope="col" class="text-center"><img src="img/produ4mini.png" alt="HP Victus 15" width="80" height="80" class="mb-2"><br>HP Victus 15</th></tr>
+            </thead>
+            <tbody>
+<tr><th scope="row">Procesador</th><td class="text-center">Intel Core i5</td><td class="text-center">Intel Core 7</td><td class="text-center">AMD Ryzen 7</td><td class="text-center">AMD Ryzen 7</td></tr>
+<tr><th scope="row">Gráficos</th><td class="text-center">NVIDIA GeForce RTX</td><td class="text-center">NVIDIA GeForce RTX 5050</td><td class="text-center">NVIDIA GeForce</td><td class="text-center">NVIDIA GeForce</td></tr>
+<tr><th scope="row">Memoria RAM</th><td class="text-center">8 GB</td><td class="text-center">16 GB</td><td class="text-center">16 GB</td><td class="text-center">8 GB</td></tr>
+<tr><th scope="row">Almacenamiento</th><td class="text-center">512 GB SSD</td><td class="text-center">1 TB SSD</td><td class="text-center">512 GB SSD</td><td class="text-center">512 GB SSD</td></tr>
+<tr><th scope="row">Pantalla</th><td class="text-center">15.6" · 144 Hz</td><td class="text-center">16" · 144 Hz</td><td class="text-center">15.6"</td><td class="text-center">15.6" · 144 Hz</td></tr>
+<tr><th scope="row">Incluye</th><td class="text-center">Incluye mochila MSI y Kaspersky</td><td class="text-center">Certificación militar MIL-STD-810H</td><td class="text-center">Teclado retroiluminado rojo</td><td class="text-center">Xbox Game Pass y Kaspersky</td></tr>
+<tr><th scope="row">Precio</th><td class="text-center"><span class="precio">$3.199.000</span></td><td class="text-center"><span class="precio">$5.499.000</span></td><td class="text-center"><span class="precio">$4.399.000</span></td><td class="text-center"><span class="precio">$3.699.000</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small suave mt-3 mb-0">
+          * Precios y especificaciones de referencia; pueden variar según disponibilidad.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PREGUNTAS FRECUENTES ===== -->
+    <section class="py-5" id="preguntas">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="h3 text-center mb-4">Preguntas frecuentes</h2>
+            <div class="accordion" id="acordeonPreguntas">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#pregunta1"
+                          aria-expanded="true" aria-controls="pregunta1">
+                    ¿Qué significa 144 Hz en la pantalla?
+                  </button>
+                </h3>
+                <div id="pregunta1" class="accordion-collapse collapse show"
+                     data-bs-parent="#acordeonPreguntas">
+                  <div class="accordion-body">
+                    La pantalla se actualiza 144 veces por segundo, lo que da imágenes más fluidas
+                    en juegos de acción y competitivos que una pantalla de 60 Hz.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#pregunta2"
+                          aria-expanded="false" aria-controls="pregunta2">
+                    ¿Cuánto tarda el envío?
+                  </button>
+                </h3>
+                <div id="pregunta2" class="accordion-collapse collapse"
+                     data-bs-parent="#acordeonPreguntas">
+                  <div class="accordion-body">
+                    Entre 2 y 5 días hábiles, según la ciudad de destino.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#pregunta3"
+                          aria-expanded="false" aria-controls="pregunta3">
+                    ¿Qué medios de pago aceptan?
+                  </button>
+                </h3>
+                <div id="pregunta3" class="accordion-collapse collapse"
+                     data-bs-parent="#acordeonPreguntas">
+                  <div class="accordion-body">
+                    Tarjeta débito y crédito, PSE, Nequi y pago contraentrega.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 suscripcion" id="suscripcion">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-lg-6">
+            <h2 class="h3">Ofertas antes que nadie</h2>
+            <p class="opacity-75 mb-4">Suscríbete y recibe 10 % en accesorios gamer en tu primera compra.</p>
+            <form id="formSuscripcion" class="needs-validation text-start" novalidate>
+              <div class="input-group has-validation mb-3">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control" id="correoSuscripcion"
+                       placeholder="tu@correo.com" aria-label="Correo electrónico" required>
+                <button class="btn btn-lima" type="submit">Suscribirme</button>
+                <div class="invalid-feedback">Escribe un correo válido.</div>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="aceptoDatos" required>
+                <label class="form-check-label small" for="aceptoDatos">
+                  Acepto el tratamiento de mis datos personales.
+                </label>
+                <div class="invalid-feedback">Debes aceptar para suscribirte.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-5 border-top borde">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <p class="fs-5 fw-bold mb-2 d-flex align-items-center gap-2">
+            <span class="logo-b"><i class="bi bi-cpu-fill"></i></span>
+            <span class="tit">Brisa<span class="text-lima">Byte</span></span>
+          </p>
+          <p class="suave small">Portátiles gamer de MSI, ASUS y HP con envío a todo el país.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="fw-semibold">Tienda</p>
+          <ul class="list-unstyled small">
+            <li><a href="#oferta" class="link-secondary">Oferta</a></li>
+            <li><a href="#catalogo-seccion" class="link-secondary">Catálogo</a></li>
+            <li><a href="#comparar" class="link-secondary">Comparar</a></li>
+            <li><a href="#preguntas" class="link-secondary">Preguntas</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="fw-semibold">Síguenos</p>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="link-light" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="link-light" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="link-light" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="borde">
+      <p class="text-center suave small mb-0">
+        &copy; 2026 BrisaByte · Proyecto académico SENA ADSO
+      </p>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="avisoCarrito" class="toast align-items-center text-bg-dark border border-success"
+         role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Producto agregado.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="panelCarrito"
+       aria-labelledby="tituloCarrito">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5" id="tituloCarrito">
+        <i class="bi bi-cart3"></i> Tu carrito
+      </h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+              aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="list-group list-group-flush flex-grow-1" id="listaCarrito"></ul>
+      <div class="border-top pt-3">
+        <div class="d-flex justify-content-between fs-5 mb-3">
+          <span>Total</span>
+          <strong id="totalCarrito">$ 0</strong>
+        </div>
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-lima" id="btnPagar">Finalizar compra</button>
+          <button type="button" class="btn btn-outline-danger rounded-0" id="btnVaciar">
+            Vaciar carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ficha técnica -->
+  <div class="modal fade" id="modalProducto" tabindex="-1"
+       aria-labelledby="tituloModalProducto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="tituloModalProducto">Producto</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="foto-blanca">
+                <img src="img/produ1.png" id="modalImagen" width="900" height="900" alt="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p id="modalDescripcion" class="suave"></p>
+              <ul class="list-unstyled lista-specs mb-3" id="modalSpecs"></ul>
+              <p id="modalPrecio" class="precio"></p>
+              <button type="button" class="btn btn-lima w-100" id="btnAgregarModal">
+                <i class="bi bi-cart-plus"></i> Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="btnArriba"
+          class="btn btn-lima rounded-circle shadow position-fixed bottom-0 start-0 m-4
+                 d-none" aria-label="Volver arriba" data-bs-title="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+
+  <script src="js/tienda.js"></script>
+</body>
+</html>

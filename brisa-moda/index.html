@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es"></html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,6 +44,7 @@
               <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
             <li class="nav-item"><a class="nav-link" href="#catalogo-seccion">Catálogo</a></li>
             <li class="nav-item"><a class="nav-link" href="#comparar">Comparar</a></li>
             <li class="nav-item"><a class="nav-link" href="#preguntas">Preguntas</a></li>
@@ -55,15 +56,12 @@
             <i class="bi bi-cart3"></i> Carrito
             <span class="position-absolute top-0 start-100 translate-middle
                          badge rounded-pill text-bg-danger" id="contadorCarrito">0</span>
+          </button>
 
           <button id="btnTema" class="btn btn-modo-oscuro" type="button"
                   data-bs-toggle="tooltip" data-bs-title="Cambiar modo oscuro/claro"
-                  data-bs-placement="button">
+                  data-bs-placement="bottom">
           <i class="bi bi-moon-stars-fill"></i>
-          </button>
-
-          
-
           </button>
         </div>
       </div>
@@ -162,6 +160,45 @@
                     data-nombre="HP Victus 15" data-precio="3699000">
               <i class="bi bi-cart-plus"></i> Comprar · $3.699.000
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPRA POR MARCA (adaptado de «Categorías» de Brisa Moda) ===== -->
+    <section class="py-5" id="marcas">
+      <div class="container">
+        <h2 class="text-center mb-4">Compra por marca</h2>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4">
+            <a href="#catalogo-seccion" class="bento marca-card text-decoration-none text-body d-block"
+               data-ir-marca="msi">
+              <div class="foto-blanca mb-3">
+                <img src="img/produ1.png" width="900" height="900" alt="Portátiles gamer MSI">
+              </div>
+              <h3 class="h4 mb-1">MSI</h3>
+              <p class="small suave mb-0">Thin 15 y Gaming 16&quot; con gráficos GeForce RTX.</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#catalogo-seccion" class="bento marca-card text-decoration-none text-body d-block"
+               data-ir-marca="asus">
+              <div class="foto-blanca mb-3">
+                <img src="img/produ3.png" width="900" height="900" alt="Portátil gamer ASUS TUF">
+              </div>
+              <h3 class="h4 mb-1">ASUS</h3>
+              <p class="small suave mb-0">TUF Gaming A15 con Ryzen 7 y 16 GB.</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#catalogo-seccion" class="bento marca-card text-decoration-none text-body d-block"
+               data-ir-marca="hp">
+              <div class="foto-blanca mb-3">
+                <img src="img/produ4.png" width="900" height="900" alt="Portátil gamer HP Victus">
+              </div>
+              <h3 class="h4 mb-1">HP</h3>
+              <p class="small suave mb-0">Victus 15 con Ryzen 7 y Game Pass.</p>
+            </a>
           </div>
         </div>
       </div>
@@ -448,6 +485,104 @@
       </div>
     </section>
 
+    <!-- ===== CARRUSEL DE PROMOCIONES (de Brisa Moda) ===== -->
+    <section class="py-5" id="promos">
+      <div class="container">
+        <div id="carruselPromos" class="carousel slide carrusel-promos" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselPromos" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Promoción 1"></button>
+            <button type="button" data-bs-target="#carruselPromos" data-bs-slide-to="1"
+                    aria-label="Promoción 2"></button>
+            <button type="button" data-bs-target="#carruselPromos" data-bs-slide-to="2"
+                    aria-label="Promoción 3"></button>
+          </div>
+          <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="bento slide-promo">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <p class="text-lima fw-semibold text-uppercase small mb-2">Incluye mochila MSI</p>
+                  <h3 class="h2 mb-2">MSI Thin 15</h3>
+                  <p class="suave mb-3">Core i5, 8 GB, 512 GB y pantalla de 144 Hz con GeForce RTX.</p>
+                  <p class="mb-3">
+                    <span class="precio fs-3 text-lima">$3.199.000</span>
+                        <del class="suave ms-2">$3.599.000</del>
+                  </p>
+                  <button type="button" class="btn btn-lima btn-agregar"
+                          data-nombre="MSI Thin 15" data-precio="3199000">
+                    <i class="bi bi-cart-plus"></i> Comprar
+                  </button>
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                  <div class="foto-blanca">
+                    <img src="img/produ1.png" width="900" height="900" alt="MSI Thin 15 con mochila">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="bento slide-promo">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <p class="text-lima fw-semibold text-uppercase small mb-2">Oferta relámpago · -8 %</p>
+                  <h3 class="h2 mb-2">HP Victus 15</h3>
+                  <p class="suave mb-3">Ryzen 7, 8 GB y Game Pass. Termina hoy a la medianoche.</p>
+                  <p class="mb-3">
+                    <span class="precio fs-3 text-lima">$3.699.000</span>
+                  </p>
+                  <button type="button" class="btn btn-lima btn-agregar"
+                          data-nombre="HP Victus 15" data-precio="3699000">
+                    <i class="bi bi-cart-plus"></i> Comprar
+                  </button>
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                  <div class="foto-blanca">
+                    <img src="img/produ4.png" width="900" height="900" alt="HP Victus 15">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="bento slide-promo">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <p class="text-lima fw-semibold text-uppercase small mb-2">Envío gratis a toda Colombia</p>
+                  <h3 class="h2 mb-2">ASUS TUF Gaming A15</h3>
+                  <p class="suave mb-3">Ryzen 7, 16 GB y 512 GB. Hasta 12 cuotas y garantía oficial.</p>
+                  <p class="mb-3">
+                    <span class="precio fs-3 text-lima">$4.399.000</span>
+                  </p>
+                  <button type="button" class="btn btn-lima btn-agregar"
+                          data-nombre="ASUS TUF Gaming A15" data-precio="4399000">
+                    <i class="bi bi-cart-plus"></i> Comprar
+                  </button>
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                  <div class="foto-blanca">
+                    <img src="img/produ3.png" width="900" height="900" alt="ASUS TUF Gaming A15">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <button class="carousel-control-prev" type="button"
+                  data-bs-target="#carruselPromos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button"
+                  data-bs-target="#carruselPromos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== PREGUNTAS FRECUENTES ===== -->
     <section class="py-5" id="preguntas">
       <div class="container">
@@ -549,6 +684,8 @@
           <p class="fw-semibold">Tienda</p>
           <ul class="list-unstyled small">
             <li><a href="#oferta" class="link-secondary">Oferta</a></li>
+            <li><a href="#marcas" class="link-secondary">Marcas</a></li>
+            <li><a href="#promos" class="link-secondary">Promociones</a></li>
             <li><a href="#catalogo-seccion" class="link-secondary">Catálogo</a></li>
             <li><a href="#comparar" class="link-secondary">Comparar</a></li>
             <li><a href="#preguntas" class="link-secondary">Preguntas</a></li>
@@ -565,7 +702,7 @@
       </div>
       <hr class="borde">
       <p class="text-center suave small mb-0">
-        &copy; 2026 BrisaByte · Proyecto académico SENA ADSO
+        &copy; 2026 BrisaByte
       </p>
     </div>
   </footer>

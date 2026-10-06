@@ -364,3 +364,94 @@ body,
   transition: background-color 0.25s ease, color 0.25s ease,
               border-color 0.25s ease;
 }
+
+
+/* ============================================================
+   CORRECCIÓN DEL MODO BLANCO
+   Causa: <html> tiene data-bs-theme="dark" fijo, así que Bootstrap
+   seguía pintando textos claros (text-body, menú, formularios, cierres…).
+   Aquí se redefinen sus variables cuando el <body> lleva .tema-blanco.
+   ============================================================ */
+body.tema-blanco {
+  color-scheme: light;
+
+  --bs-body-color: #151515;
+  --bs-body-color-rgb: 21, 21, 21;
+  --bs-body-bg: #f5f5f5;
+  --bs-body-bg-rgb: 245, 245, 245;
+  --bs-emphasis-color: #000;
+  --bs-emphasis-color-rgb: 0, 0, 0;
+  --bs-secondary-color: rgba(21, 21, 21, 0.75);
+  --bs-secondary-color-rgb: 21, 21, 21;
+  --bs-tertiary-color: rgba(21, 21, 21, 0.5);
+  --bs-tertiary-color-rgb: 21, 21, 21;
+  --bs-secondary-bg: #e9ecef;
+  --bs-secondary-bg-rgb: 233, 236, 239;
+  --bs-tertiary-bg: #f8f9fa;
+  --bs-tertiary-bg-rgb: 248, 249, 250;
+  --bs-border-color: #d6d6d6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+
+  /* verde oscuro para textos (el lima brillante no se lee sobre blanco) */
+  --b-lima-texto: #3f6212;
+  --b-magenta-texto: #be185d;
+
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Textos que usaban el lima / magenta brillante */
+body.tema-blanco .text-lima,
+body.tema-blanco .chip i,
+body.tema-blanco .specs i,
+body.tema-blanco .lista-specs i,
+body.tema-blanco .filtros h3,
+body.tema-blanco .cuenta strong { color: var(--b-lima-texto); }
+
+body.tema-blanco .text-magenta { color: var(--b-magenta-texto); }
+
+/* Menú */
+body.tema-blanco .navbar .nav-link { color: #151515; }
+body.tema-blanco .navbar .nav-link:hover,
+body.tema-blanco .navbar .nav-link.active { color: var(--b-lima-texto); }
+
+/* Botón de tema (modo oscuro/blanco): visible en ambos temas */
+.btn-modo-oscuro {
+  --bs-btn-color: var(--b-texto);
+  --bs-btn-border-color: var(--b-borde);
+  --bs-btn-hover-color: var(--b-lima);
+  --bs-btn-hover-border-color: var(--b-lima);
+  --bs-btn-active-color: var(--b-lima);
+  --bs-btn-active-border-color: var(--b-lima);
+  --bs-btn-border-radius: 0;
+}
+body.tema-blanco .btn-modo-oscuro {
+  --bs-btn-hover-color: var(--b-lima-texto);
+  --bs-btn-hover-border-color: var(--b-lima-texto);
+  --bs-btn-active-color: var(--b-lima-texto);
+  --bs-btn-active-border-color: var(--b-lima-texto);
+}
+
+/* Tarjetas y enlaces */
+body.tema-blanco .item:hover,
+body.tema-blanco .marca-card:hover { border-color: var(--b-lima-texto); }
+body.tema-blanco .link-light { color: #151515 !important; }
+body.tema-blanco .link-light:hover { color: var(--b-lima-texto) !important; }
+
+/* Botones de cerrar (el filtro invertido era del tema oscuro) */
+body.tema-blanco .btn-close:not(.btn-close-white) { filter: none; }
+
+/* Carrusel */
+body.tema-blanco .carrusel-promos .carousel-indicators [data-bs-target] {
+  background-color: var(--b-lima-texto);
+}
+
+/* Tabla «Compara especificaciones»: .table-dark fijaba texto blanco */
+body.tema-blanco .tabla-comparar {
+  --bs-table-color: #151515;
+  --bs-table-bg: #ffffff;
+  --bs-table-border-color: var(--b-borde);
+  --bs-table-striped-color: #151515;
+  --bs-table-hover-color: #151515;
+  color: #151515;
+}
+body.tema-blanco .tabla-comparar th[scope="row"] { color: var(--b-texto-suave); }
